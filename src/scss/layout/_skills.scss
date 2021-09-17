@@ -1,0 +1,90 @@
+/* Skills */
+.skills-info {
+  height: 70%;
+  @include flex($center: true, $direction: column);
+  margin: 0 auto;
+  padding-right: 40px;
+  border-right: 1px solid #4d4d4d;
+  h3 {
+    width: 100%;
+    text-align: start;
+    color: $text-light;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 15px 0;
+    text-align: start;
+  }
+}
+
+.skills-technologies {
+  @include flex($center: true, $direction: column);
+  gap: 30px;
+  color: $color-second;
+  width: 100%;
+
+  h3 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: $text-hover;
+  }
+}
+
+.technologies {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 50px;
+  column-gap: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.technologies-icons {
+  @include flex($center: true, $direction: column);
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 80px;
+  color: $text-principal;
+
+  p {
+    margin-top: 5px;
+  }
+}
+
+@media (min-width: 280px) and (max-width: 768px) {
+  .skills .grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+  }
+  .skills-info {
+    height: auto;
+    padding: 0;
+    border: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .technologies {
+    column-gap: 10px;
+  }
+  .technologies-icons {
+    height: 100px;
+    width: 100px;
+  }
+  .skills .grid {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .item-info {
+    p {
+      text-align: center;
+    }
+  }
+}

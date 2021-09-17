@@ -1,0 +1,48 @@
+footer {
+  height: 100%;
+  width: 100%;
+  @include flex($center: true);
+}
+
+.footer-info {
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  color: $text-principal;
+
+  p {
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  i {
+    font-size: 2em;
+  }
+
+  .social-net {
+    gap: 5px;
+
+    a {
+      color: $text-principal;
+    }
+  }
+}
+
+@media (min-width: 280px) and (max-width: 768px) {
+  .footer-info {
+    flex-direction: column;
+    gap: 20px;
+
+    p {
+      padding-bottom: 10px;
+      border-bottom: 1px solid #fff;
+    }
+
+    i {
+      font-size: 1.5em;
+    }
+  }
+}

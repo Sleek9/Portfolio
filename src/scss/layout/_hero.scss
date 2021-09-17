@@ -1,0 +1,39 @@
+/* Hero */
+
+main {
+  height: 100%;
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+}
+
+.bg-1 {
+  right: 0;
+  background: url(/build/img/bg-1.svg) no-repeat left center;
+}
+
+.bg-2 {
+  left: 0;
+  background: url(/build/img/bg-2.svg) no-repeat right center;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  font-family: "Lato", sans-serif;
+  background-color: #161f2d;
+  h1 {
+    font-weight: 800;
+  }
+  .hero-title {
+    z-index: 1;
+    max-width: 80%;
+  }
+}

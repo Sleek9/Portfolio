@@ -1,0 +1,58 @@
+/* Types of texts */
+.textAnimated {
+  transition: top 1s ease;
+  position: relative;
+  top: 20px;
+
+  &::after {
+    position: relative;
+    display: block;
+    content: "";
+    background: #4f46e5;
+    margin: 10px 0;
+    width: 1px;
+    height: 4px;
+    transition: width 1.5s ease-out;
+    box-shadow: 0px 2px 20px 0px rgb(79, 70, 229);
+  }
+}
+
+.textAnimated.animation,
+.textAnimatedCenter.animation {
+  top: 0;
+}
+
+.textAnimated.animation {
+  &::after {
+    width: 70px;
+  }
+}
+
+.textAnimatedCenter.animation {
+  &::after {
+    width: 100px;
+  }
+}
+
+.text-bold {
+  color: $text-hover;
+}
+
+.textAnimatedCenter {
+  position: relative;
+  top: 20px;
+  width: 100%;
+  margin: 20px auto;
+  text-align: center;
+  transition: top 1s ease-out;
+  &::after {
+    display: block;
+    content: "";
+    background: #4f46e5;
+    width: 1px;
+    height: 4px;
+    margin: 10px auto;
+    transition: width 1.5s ease-out;
+    box-shadow: 0px 2px 20px 0px rgb(79, 70, 229);
+  }
+}
