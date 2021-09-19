@@ -1,4 +1,4 @@
-const $bg = document.querySelectorAll(".bg"); //Background inicio
+const $bg = document.querySelectorAll(".bg");
 
 window.addEventListener("scroll", () => {
   const y = window.scrollY;
