@@ -1,7 +1,7 @@
 //Observer para la secion de Sobre Mi (about)
 (function about() {
   const $about = document.querySelector("#about");
-  const $aboutTitle = document.querySelector(".about-info h2");
+  const $aboutTitle = document.querySelector("#about h2");
 
   const observerElement = (entries, observer) => {
     entries.forEach((entry) => {
@@ -23,7 +23,7 @@
 (function skills() {
   //Observer para la secion de Habilidades (Skills)
   const $skills = document.querySelector("#skills");
-  const $skillsTitle = document.querySelector(".skills h2");
+  const $skillsTitle = document.querySelector("#skills h2");
 
   const observerElement = (entries, observer) => {
     entries.forEach((entry) => {
@@ -44,7 +44,7 @@
 
 (function proyects() {
   const $proyects = document.querySelector("#proyects");
-  const $proyectsTitle = document.querySelector(".proyects h2");
+  const $proyectsTitle = document.querySelector("#proyects h2");
 
   const observerElement = (entries, observer) => {
     entries.forEach((entry) => {

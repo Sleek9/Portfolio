@@ -1,8 +1,6 @@
 /* ABOUT */
-.about-img {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.about__img {
+  @include flex($center: true);
   text-align: center;
   color: $color-second;
   position: relative;
@@ -17,7 +15,7 @@
   }
 }
 
-.about-info h3 {
+.about__info h3 {
   max-width: 350px;
   margin: 30px 0;
   font-weight: initial;
@@ -26,7 +24,7 @@
 }
 
 @media (min-width: 280px) and (max-width: 768px) {
-  .about-img span {
+  .about__img span {
     margin-top: 40px;
     font-size: 10rem;
   }

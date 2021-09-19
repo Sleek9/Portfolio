@@ -1,10 +1,10 @@
-.proyects-list {
+.proyects {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
 }
 
-.proyects-items {
+.proyects__items {
   width: 100%;
   height: max-content;
   border-radius: 5px;
@@ -23,19 +23,21 @@
     border-radius: 15px;
     object-fit: cover;
   }
+}
 
-  .item-title {
+.item {
+  .item__title {
     color: $text-light;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
   }
 
-  .item-des {
+  .item__description {
     margin-bottom: 20px;
   }
 
-  .item-lg {
+  .item__languages {
     display: flex;
     gap: 15px;
     margin-bottom: 30px;
@@ -47,68 +49,38 @@
       border-radius: 10px;
     }
   }
-  a {
-    font-weight: bold;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 10px;
-    background: linear-gradient(270deg, #10b981, #12eca4);
+  .item__src {
+    a {
+      font-weight: bold;
+      color: #fff;
+      padding: 10px 15px;
+      border-radius: 10px;
+      background: linear-gradient(270deg, #10b981, #12eca4);
 
-    &:hover {
-      opacity: 0.8;
+      &:hover {
+        opacity: 0.8;
+      }
     }
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
-  /* CSS */
-  .proyects-items {
-    img {
-      width: 200px;
-      height: 200px;
-    }
-  }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-  .proyects-list {
+@media (min-width: 280px) and (max-width: 1024px) {
+  .proyects {
     @include flex($center: true, $direction: column);
   }
-  .proyects-items {
+  .proyects__items {
     flex-direction: column;
     height: max-content;
     img {
       width: 90%;
-      height: 400px;
+      height: 90%;
     }
   }
-  .item-title {
+  .item__title {
     text-align: center;
   }
-  .item-src,
-  .item-lg {
-    @include flex($center: true);
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-}
-@media (min-width: 280px) and (max-width: 767px) {
-  .proyects-list {
-    @include flex($center: true, $direction: column);
-  }
-  .proyects-items {
-    flex-direction: column;
-    height: max-content;
-    img {
-      width: 90%;
-      height: 200px;
-    }
-  }
-  .item-title {
-    text-align: center;
-  }
-  .item-src,
-  .item-lg {
+  .item__src,
+  .item__languages {
     @include flex($center: true);
     flex-wrap: wrap;
     margin: 0 auto;
