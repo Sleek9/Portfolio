@@ -10,11 +10,13 @@ const terser = require("gulp-terser-js");
 const rename = require("gulp-rename");
 const notify = require("gulp-notify");
 const webp = require("gulp-webp");
+const htmlmin = require("gulp-htmlmin");
 
 const paths = {
   scss: "src/scss/**/*.scss",
   js: "src/js/**/*.js",
   imagenes: "src/img/**/*",
+  html: "src/index.html",
 };
 
 // css es una función que se puede llamar automaticamente
@@ -26,6 +28,12 @@ function css() {
     .pipe(postcss([autoprefixer()]))
     .pipe(sourcemaps.write("."))
     .pipe(dest("./build/css"));
+}
+
+function html() {
+  return src(paths.html)
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest("./build"));
 }
 
 function javascript() {
@@ -53,4 +61,5 @@ function watchArchivos() {
 
 exports.css = css;
 exports.save = watchArchivos;
-exports.default = parallel(css, javascript, versionWebp, watchArchivos);
+exports.html = html;
+exports.default = parallel(css, javascript, versionWebp, watchArchivos, html);
