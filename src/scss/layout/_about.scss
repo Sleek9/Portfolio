@@ -23,6 +23,11 @@
   font-style: italic;
 }
 
+.about__info p {
+  font-size: 18px;
+  font-style: italic;
+}
+
 @media (min-width: 280px) and (max-width: 768px) {
   .about__img span {
     margin-top: 40px;
