@@ -47,10 +47,7 @@ function javascript() {
 }
 
 function versionWebp() {
-  return src(paths.imagenes)
-    .pipe(webp())
-    .pipe(dest("build/img"))
-    .pipe(notify({ message: "Imagen Completada" }));
+  return src(paths.imagenes).pipe(webp()).pipe(dest("build/img"));
 }
 
 function watchArchivos() {
